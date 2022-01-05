@@ -69,10 +69,7 @@
     box-sizing: border-box;
 
     @include when(filterable) {
-      height: calc(
-        var(--el-transfer-panel-body-height) - var(--el-transfer-filter-height) -
-          20px
-      );
+      height: calc(100% - var(--el-transfer-filter-height) - 30px);
       padding-top: 0;
     }
   }
@@ -100,7 +97,7 @@
       @include utils-ellipsis;
       display: block;
       box-sizing: border-box;
-      padding-left: 24px;
+      padding-left: 22px;
       line-height: var(--el-transfer-item-height);
     }
 
@@ -114,7 +111,6 @@
     text-align: center;
     margin: 15px;
     box-sizing: border-box;
-    display: block;
     width: auto;
 
     .#{$namespace}-input__inner {
@@ -124,12 +120,6 @@
       display: inline-block;
       box-sizing: border-box;
       border-radius: calc(var(--el-transfer-filter-height) / 2);
-      padding-right: 10px;
-      padding-left: 30px;
-    }
-
-    .#{$namespace}-input__icon {
-      margin-left: 5px;
     }
 
     .#{$namespace}-icon-circle-close {
